@@ -21,4 +21,4 @@ Ok to proceed? (y) y
 √ Would you like to customize the import alias (`@/*` by default)? ... No
 Creating a new Next.js app in C:\react\bookit-app.
 
-
+PS C:\react\bookit-app> npm install --save-dev --save-exact prettier
