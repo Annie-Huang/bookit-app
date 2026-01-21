@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '@/assets/images/logo.svg';
+import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -7,7 +9,12 @@ const Header = () => {
         <div className='flex h-16 items-center justify-between'>
           <div className='flex items-center'>
             <a href='/'>
-              <img className='h-12 w-12' src='images/logo.svg' alt='Bookit' />
+              <Image
+                className='h-12 w-12'
+                src={logo}
+                alt='Bookit'
+                priority={true}
+              />
             </a>
             <div className='hidden md:block'>
               <div className='ml-10 flex items-baseline space-x-4'>
