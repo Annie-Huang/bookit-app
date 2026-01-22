@@ -10,7 +10,12 @@ const RoomPage = ({ params }) => {
     return <Heading title='Room Not Found' />;
   }
 
-  return <div>Room {id}</div>;
+  // return <>Room {id}</>;
+  return (
+    <>
+      <Heading title={room.name} />
+    </>
+  );
 };
 
 export default RoomPage;
