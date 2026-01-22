@@ -3,7 +3,8 @@ import Heading from '@/components/Heading';
 
 const RoomPage = ({ params }) => {
   const { id } = params;
-  const room = rooms.find((room) => room.$id === id);
+  // console.log(rooms);
+  const room = rooms.find((room) => room.id === id); // I got confused why it does not need the room.$id in here??
 
   if (!room) {
     return <Heading title='Room Not Found' />;
