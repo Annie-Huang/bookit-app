@@ -23,3 +23,8 @@ Creating a new Next.js app in C:\react\bookit-app.
 
 
 PS C:\react\bookit-app> npm i react-icons
+
+
+http://localhost:3000/
+http://localhost:3000/rooms/2
+
