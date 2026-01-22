@@ -9,22 +9,22 @@ const RoomCard = ({ room }) => {
           src={`/images/rooms/${room.image}`}
           width={400}
           height={100}
-          alt='Grand Conference Hall'
+          alt={room.name}
           className='w-full sm:w-32 sm:h-32 mb-3 sm:mb-0 object-cover rounded-lg'
         />
         <div className='space-y-1'>
-          <h4 className='text-lg font-semibold'>Grand Conference Hall</h4>
+          <h4 className='text-lg font-semibold'>{room.name}</h4>
           <p className='text-sm text-gray-600'>
             <span className='font-semibold text-gray-800'> Address:</span> 555
-            California St, San Francisco, CA 94104
+            {room.address}
           </p>
           <p className='text-sm text-gray-600'>
             <span className='font-semibold text-gray-800'> Availability:</span>9
-            AM - 5 PM
+            {room.availability}
           </p>
           <p className='text-sm text-gray-600'>
-            <span className='font-semibold text-gray-800'> Price:</span>
-            $150/hour
+            <span className='font-semibold text-gray-800'> Price:</span>$
+            {room.price_per_hour}/hour
           </p>
         </div>
       </div>
