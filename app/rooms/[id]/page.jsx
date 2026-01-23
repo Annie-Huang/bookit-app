@@ -2,6 +2,7 @@ import rooms from '@/data/rooms.json';
 import Heading from '@/components/Heading';
 import { FaChevronLeft } from 'react-icons/fa';
 import Image from 'next/image';
+import BookingForm from '@/components/BookingForm';
 
 const RoomPage = ({ params }) => {
   const { id } = params;
@@ -59,6 +60,8 @@ const RoomPage = ({ params }) => {
             </ul>
           </div>
         </div>
+
+        <BookingForm />
       </div>
     </>
   );
