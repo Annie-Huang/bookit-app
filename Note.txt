@@ -4,6 +4,8 @@ Create A Booking App From Scratch | React, Next.js, Appwrite, Tailwind
 https://github.com/bradtraversy/bookit-app
 https://github.com/Annie-Huang/bookit-app
 
+https://cloud.appwrite.io/console/project-fra-6973567f0013b0585cfe/databases/database-bookit/table-rooms/columns
+
 ----------------------------------------------------------------
 
 PS C:\react> npx create-next-app@latest bookit-app
