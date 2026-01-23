@@ -1,6 +1,7 @@
 import rooms from '@/data/rooms.json';
 import Heading from '@/components/Heading';
 import { FaChevronLeft } from 'react-icons/fa';
+import Image from 'next/image';
 
 const RoomPage = ({ params }) => {
   const { id } = params;
@@ -25,9 +26,11 @@ const RoomPage = ({ params }) => {
         </a>
 
         <div className='flex flex-col sm:flex-row sm:space-x-6'>
-          <img
-            src='images/rooms/room-1.jpg'
-            alt='Grand Conference Hall'
+          <Image
+            src={`/images/rooms/${room.image}`}
+            alt={room.name}
+            width={400} // we hve to put width, otherwise <Image> component will complain. But still will be overriden by className value.
+            height={100}
             className='w-full sm:w-1/3 h-64 object-cover rounded-lg'
           />
 
