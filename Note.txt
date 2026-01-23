@@ -30,3 +30,10 @@ PS C:\react\bookit-app> npm i react-icons
 http://localhost:3000/
 http://localhost:3000/rooms/2
 
+
+Note:
+Vite is a build tool and development server that speeds up frontend development (e.g., for web apps with React, Vue, Svelte) with features like Hot Module Replacement (HMR). It does not provide any backend services or databases.
+Expo is a framework and platform for building universal React Native applications (for iOS, Android, and web). It provides an SDK with easy access to native device APIs. While Expo itself doesn't offer a cloud database, it facilitates using backend services like Appwrite or local options like SQLite.
+
+
+
