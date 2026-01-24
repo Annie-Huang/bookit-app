@@ -1,7 +1,6 @@
 'use server';
 
 import { createAdminClient } from '@/config/appwrite';
-
 // use for update the cache when we add a new room and we get redirected, we still want the new room to show on the list page.
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
@@ -26,5 +25,13 @@ async function getAllRooms() {
       databaseId: process.env.NEXT_PUBLIC_APPWRITE_DATABASE,
       tableId: process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS,
     });
-  } catch (e) {}
+
+    // Revalidate the cache for this path
+    revalidatePath('/', 'layout');
+
+    return rooms;
+  } catch (error) {
+    console.log('Failed to get rooms', error);
+    redirect('/error');
+  }
 }
