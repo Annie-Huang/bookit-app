@@ -5,6 +5,9 @@ https://github.com/bradtraversy/bookit-app
 https://github.com/Annie-Huang/bookit-app
 
 https://cloud.appwrite.io/console/project-fra-6973567f0013b0585cfe/databases/database-bookit/table-rooms/columns
+https://appwrite.io/docs/tutorials/nextjs-ssr-auth/step-3#environment-variables
+https://appwrite.io/docs/products/auth/server-side-rendering#admin-client
+https://appwrite.io/docs/products/auth/server-side-rendering#session-client
 
 ----------------------------------------------------------------
 
