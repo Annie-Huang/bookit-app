@@ -9,6 +9,7 @@ https://appwrite.io/docs/tutorials/nextjs-ssr-auth/step-3#environment-variables
 https://appwrite.io/docs/products/auth/server-side-rendering#admin-client
 https://appwrite.io/docs/products/auth/server-side-rendering#session-client
 
+https://appwrite.io/docs/references/cloud/client-web/tablesDB#listRows
 ----------------------------------------------------------------
 
 PS C:\react> npx create-next-app@latest bookit-app

@@ -1,4 +1,4 @@
-import { Client, Databases, Account, Storage } from 'node-appwrite'; // Using the server SDK
+import { Client, Databases, Account, Storage, TablesDB } from 'node-appwrite'; // Using the server SDK
 
 // Admin Client
 // https://appwrite.io/docs/products/auth/server-side-rendering#admin-client
@@ -18,9 +18,14 @@ const createAdminClient = async () => {
     get storage() {
       return new Storage(client);
     },
+    // https://appwrite.io/docs/references/cloud/client-web/tablesDB#listRows
+    get tablesDB() {
+      new TablesDB(client);
+    },
   };
 };
 
+// https://appwrite.io/docs/products/auth/server-side-rendering#session-client
 const createSessionClient = async (session) => {
   const client = new Client()
     .setEndpoint(process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT) // Your API Endpoint
