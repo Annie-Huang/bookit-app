@@ -7,27 +7,29 @@ import { redirect } from 'next/navigation';
 
 async function getAllRooms() {
   try {
-    // const { databases } = await createAdminClient();
+    const { databases } = await createAdminClient();
     const { tablesDB } = await createAdminClient();
 
     // Fetch rooms
     // From C:\react\bookit-app\node_modules\node-appwrite\dist\services\databases.d.ts:
     //    This API has been deprecated since 1.8.0. Please use TablesDB.listRows instead.
-    /*const { documents: rooms } = await databases.listDocuments(
+    const { documents: rooms } = await databases.listDocuments(
       process.env.NEXT_PUBLIC_APPWRITE_DATABASE,
-      process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS
-    );*/
+      process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS,
+    );
 
     // https://appwrite.io/docs/references/cloud/client-web/tablesDB#listRows
-    const { documents: rooms } = await tablesDB.listRows({
-      // databaseId: '<DATABASE_ID>',
-      // tableId: '<TABLE_ID>',
-      databaseId: process.env.NEXT_PUBLIC_APPWRITE_DATABASE,
-      tableId: process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS,
-    });
+    /*    const { documents: rooms } = await tablesDB.listRows({
+      // databaseId: process.env.NEXT_PUBLIC_APPWRITE_DATABASE,
+      // tableId: process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS,
+      databaseId: 'bookit',
+      tableId: 'rooms',
+    });*/
+
+    console.log('rooms', rooms);
 
     // Revalidate the cache for this path
-    revalidatePath('/', 'layout');
+    // revalidatePath('/', 'layout');
 
     return rooms;
   } catch (error) {
@@ -35,3 +37,5 @@ async function getAllRooms() {
     redirect('/error');
   }
 }
+
+export default getAllRooms;

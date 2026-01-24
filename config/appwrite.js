@@ -20,7 +20,7 @@ const createAdminClient = async () => {
     },
     // https://appwrite.io/docs/references/cloud/client-web/tablesDB#listRows
     get tablesDB() {
-      new TablesDB(client);
+      return new TablesDB(client);
     },
   };
 };
